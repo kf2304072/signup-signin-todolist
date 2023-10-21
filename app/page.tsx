@@ -1,7 +1,8 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from 'next/image';
+import Button from '@/components/Button';
 
 export default function Home() {
+
   return (
       <div className='flex flex-col items-center h-full '>
         <h1 className="text-4xl mb-5">Todo List</h1>
@@ -12,14 +13,12 @@ export default function Home() {
           width={632}
           height={400}
         />
-        <Link href="/signup/" 
-          className='bg-blue-400 hover:bg-blue-500 rounded-md py-3 px-3 cursor-pointer w-[632px] text-center mb-10 text-lg'>
+        <Button href='/signup' className='bg-blue-400 hover:bg-blue-500 mb-10'>
           新規登録画面
-        </Link>
-        <Link href="/signin/" 
-          className='bg-pink-400 hover:bg-pink-500 rounded-md py-3 px-3 cursor-pointer w-[632px] text-center text-lg'>
+        </Button>
+        <Button href='/signin' className='bg-pink-400 hover:bg-pink-500'>
           ログイン画面
-        </Link>
+        </Button>
       </div>
 
   );
